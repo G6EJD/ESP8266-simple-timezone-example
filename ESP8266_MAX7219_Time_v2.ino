@@ -24,6 +24,7 @@ int width  = 5 + spacer; // The font width is 5 pixels
 
 void setup() {
   Serial.begin(115200);
+  WiFi.begin("yourSSID", "yourPASSWORD");
   configTime(0, 0, "pool.ntp.org", "time.nist.gov");
   setenv("TZ", "GMT0BST,M3.5.0/2,M10.5.0/2", 0);  // https://github.com/nayarsystems/posix_tz_db 
   delay(750); // Requires ~ 750mS for time to start, sometimes longer 
